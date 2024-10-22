@@ -28,6 +28,13 @@
     -fx-text-fill: red;
 }
 
+#titulo-label-iara{
+    -fx-font-weight: bold;
+    -fx-text-transform: uppercase;
+    -fx-font-size: 60px;
+    -fx-text-fill: red;
+}
+
 #sair-button {
     -fx-background-color: white;
     -fx-border-color: black;

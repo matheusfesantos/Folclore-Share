@@ -100,8 +100,8 @@ public class Mitologias extends Application {
         iaraContainer.setPadding(new Insets(10));
         iaraContainer.setOnMouseClicked(e -> {
             Stage iaraStage = new Stage();
-            //Iara iara = new Iara();
-            //iara.start(iaraStage);
+            Iara iara = new Iara();
+            iara.start(iaraStage);
             primaryStage.close();
         });
         grid.add(iaraContainer, 3, 0);
