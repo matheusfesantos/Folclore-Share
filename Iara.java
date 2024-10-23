@@ -46,7 +46,15 @@ public class Iara extends Application {
         vbox.getChildren().addAll(curupiraContainer);
 
         Label historia = new Label(
-                "ADD A HISTÓRIA....."
+                "A Iara, também conhecida como Mãe d'Água, é uma das mais encantadoras figuras do folclore brasileiro. Ela é uma\n" +
+                        "serena e bela sereia que vive nas águas doces dos rios e lagos da Amazônia. Sua aparência é descrita como a de uma\n" +
+                        "mulher de longos cabelos negros e olhos penetrantes, com metade do corpo humano e a outra metade de peixe. Iara é\n" +
+                        "famosa por seu canto hipnotizante, que atrai os navegantes para as profundezas das águas. Aqueles que ouvem sua voz\n" +
+                        "melodiosa não conseguem resistir ao seu encanto e acabam sendo levados para o fundo dos rios. Apesar de sua beleza\n" +
+                        "e fascinação, a Iara pode ser perigosa para aqueles que se aproximam de seu território sem respeito. No entanto,\n" +
+                        "algumas histórias contam que a Iara é uma protetora das águas e das criaturas que nela habitam, punindo aqueles\n" +
+                        "que poluem ou ameaçam seu ambiente. Assim, ela é uma representação da força misteriosa da natureza e da importância\n" +
+                        "de preservar os rios e as florestas do Brasil."
         );
         historia.setId("historia");
         vbox.getChildren().add(historia);
