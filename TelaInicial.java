@@ -59,21 +59,16 @@ public class TelaInicial extends Application {
 
         folclore.setCenter(vbox);
 
-        HBox footer = new HBox(10);
-        footer.setAlignment(Pos.CENTER);
-        footer.setPadding(new Insets(10));
-        footer.setId("footer");
+        HBox rodape = new HBox(10);
+        rodape.setAlignment(Pos.CENTER);
+        rodape.setPadding(new Insets(10));
+        rodape.setId("rodape");
 
         Label rodapeLabel = new Label("By Matheus Ferreira");
         rodapeLabel.setId("rodape-label");
 
-        Image githubImage = new Image("file:path/to/your/github/icon.png");
-        ImageView githubImageView = new ImageView(githubImage);
-        githubImageView.setFitWidth(20);
-        githubImageView.setFitHeight(20);
-
-        footer.getChildren().addAll(githubImageView, rodapeLabel);
-        folclore.setBottom(footer);
+        rodape.getChildren().addAll(rodapeLabel);
+        folclore.setBottom(rodape);
 
         Scene mainScene = new Scene(folclore, 900, 540);
         mainScene.getStylesheets().add(getClass().getResource("/Styles/TelaInicial.css").toExternalForm());

@@ -124,6 +124,22 @@ public class Mitologias extends Application {
 
         folclore.setBottom(hBox);
 
+        HBox rodape = new HBox(10);
+        rodape.setAlignment(Pos.CENTER);
+        rodape.setPadding(new Insets(10));
+        rodape.setId("rodape");
+
+        Label rodapeLabel = new Label("By Matheus Ferreira");
+        rodapeLabel.setId("rodape-label");
+
+        Image githubImage = new Image("file:path/to/your/github/icon.png");
+        ImageView githubImageView = new ImageView(githubImage);
+        githubImageView.setFitWidth(20);
+        githubImageView.setFitHeight(20);
+
+        rodape.getChildren().addAll(githubImageView, rodapeLabel);
+        folclore.setBottom(rodape);
+
         Scene scene = new Scene(folclore, 900, 540);
         scene.getStylesheets().add("/Styles/Mitologias.css");
         primaryStage.setScene(scene);

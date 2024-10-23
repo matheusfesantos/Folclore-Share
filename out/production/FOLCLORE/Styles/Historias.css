@@ -32,7 +32,7 @@
     -fx-font-weight: bold;
     -fx-text-transform: uppercase;
     -fx-font-size: 60px;
-    -fx-text-fill: red;
+    -fx-text-fill: blue;
 }
 
 #sair-button {

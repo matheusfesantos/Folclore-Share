@@ -1,13 +1,11 @@
 #titulo-label{
-    -fx-padding: 14px;
+    -fx-padding: 16px;
     -fx-background-color: rgba(255, 255, 255, 0.8);
-    -fx-background-radius: 20px;
     -fx-border-color: black;
     -fx-border-width: 3px;
-    -fx-border-radius: 20px;
     -fx-text-fill: black;
     -fx-font-weight: bold;
-    -fx-font-size: 25px;
+    -fx-font-size: 20px;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.0, 0, 0);
 }
 
@@ -87,4 +85,14 @@
 
 #alert-dialog .button:hover {
     -fx-background-color: #ff6347;
+}
+
+#rodape {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+#rodape-label {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-text-transform: uppercase;
 }
