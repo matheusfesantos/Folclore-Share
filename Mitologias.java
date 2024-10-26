@@ -37,8 +37,8 @@ public class Mitologias extends Application {
         // Curupira
         Image curupiraImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/Personagens/Curupira.png");
         ImageView curupiraImageView = new ImageView(curupiraImage);
-        curupiraImageView.setFitWidth(100);
-        curupiraImageView.setFitHeight(100);
+        curupiraImageView.setFitWidth(120);
+        curupiraImageView.setFitHeight(120);
         curupiraImageView.setPreserveRatio(true);
         StackPane curupiraContainer = new StackPane();
         curupiraContainer.getChildren().add(curupiraImageView);
@@ -55,8 +55,8 @@ public class Mitologias extends Application {
         // Saci
         Image saciImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/Personagens/Saci.png");
         ImageView saciImageView = new ImageView(saciImage);
-        saciImageView.setFitWidth(100);
-        saciImageView.setFitHeight(100);
+        saciImageView.setFitWidth(120);
+        saciImageView.setFitHeight(120);
         saciImageView.setPreserveRatio(true);
         StackPane saciContainer = new StackPane();
         saciContainer.getChildren().add(saciImageView);
@@ -73,8 +73,8 @@ public class Mitologias extends Application {
         // Boitata
         Image boitataImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/Personagens/Boitata.gif");
         ImageView boitataImageView = new ImageView(boitataImage);
-        boitataImageView.setFitWidth(100);
-        boitataImageView.setFitHeight(100);
+        boitataImageView.setFitWidth(120);
+        boitataImageView.setFitHeight(120);
         boitataImageView.setPreserveRatio(true);
         StackPane boitataContainer = new StackPane();
         boitataContainer.getChildren().add(boitataImageView);
@@ -91,8 +91,8 @@ public class Mitologias extends Application {
         // Iara
         Image iaraImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/Personagens/Iara.png");
         ImageView iaraImageView = new ImageView(iaraImage);
-        iaraImageView.setFitWidth(100);
-        iaraImageView.setFitHeight(100);
+        iaraImageView.setFitWidth(120);
+        iaraImageView.setFitHeight(120);
         iaraImageView.setPreserveRatio(true);
         StackPane iaraContainer = new StackPane();
         iaraContainer.getChildren().add(iaraImageView);
@@ -123,6 +123,7 @@ public class Mitologias extends Application {
         hBox.getChildren().add(sair);
 
         folclore.setBottom(hBox);
+        
 
         Scene scene = new Scene(folclore, 900, 540);
         scene.getStylesheets().add("/Styles/Mitologias.css");
