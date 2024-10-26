@@ -16,7 +16,7 @@ public class TelaInicial extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("FOLCLORE SHARE");
+        primaryStage.setTitle("FOLCLORE SHARE ");
         primaryStage.getIcons().add(new Image(getClass().getResource("/Imagens/LogoJanela.jpg").toExternalForm()));
 
         BorderPane folclore = new BorderPane();
