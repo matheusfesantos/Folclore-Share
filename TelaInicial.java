@@ -20,8 +20,7 @@ public class TelaInicial extends Application {
         primaryStage.getIcons().add(new Image(getClass().getResource("/Imagens/LogoJanela.jpg").toExternalForm()));
 
         BorderPane folclore = new BorderPane();
-        folclore.setStyle("-fx-background-image: url('" + getClass().getResource("/Imagens/FlorestBackground.gif").toExternalForm() + "');" +
-                "-fx-background-size: cover;");
+        folclore.setStyle("-fx-background-image: url('" + getClass().getResource("/Imagens/FlorestBackground.gif").toExternalForm());
 
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
