@@ -6,6 +6,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
@@ -19,8 +20,12 @@ public class TelaInicial extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("FOLCLORE SHARE");
+        String image = "src\\resources\\Imagens\\LogoJanela.jpg";
+        primaryStage.getIcons().add(new Image(image));
 
         BorderPane folclore = new BorderPane();
+        String background = "src/resources/Imagens/FlorestBackground.gif";
+        folclore.setStyle("-fx-background-image: url('" + background + "');");
 
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
@@ -50,10 +55,8 @@ public class TelaInicial extends Application {
         vbox.getChildren().add(sobre);
 
         sobre.setOnAction(e -> {
-            Stage sobreStage = new Stage();
             Sobre telasobre = new Sobre();
-            telasobre.start(sobreStage);
-            primaryStage.close();
+            telasobre.start(primaryStage);
         });
 
         folclore.setCenter(vbox);
@@ -70,7 +73,7 @@ public class TelaInicial extends Application {
         folclore.setBottom(rodape);
 
         Scene mainScene = new Scene(folclore, 900, 540);
-        mainScene.getStylesheets().add("src/main/resources/Styles/TelaInicial.css");
+        mainScene.getStylesheets().add("src/resources/Styles/TelaInicial.css");
 
         primaryStage.setScene(mainScene);
         primaryStage.show();

@@ -20,7 +20,8 @@ public class Boitata extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("FOLCLORE SHARE");
-        primaryStage.getIcons().add(new Image(getClass().getResource("/Imagens/LogoJanela.jpg").toExternalForm()));
+        String Image = "src\\resources\\Imagens\\Personagens\\Boitata.gif";
+        primaryStage.getIcons().add(new Image(Image));
 
         BorderPane folclore = new BorderPane();
 

@@ -17,11 +17,12 @@ public class Sobre extends Application {
 
     public void start(Stage primaryStage) {
         primaryStage.setTitle("FOLCLORE SHARE");
-        primaryStage.getIcons().add(new Image(getClass().getResource("/Imagens/LogoJanela.jpg").toExternalForm()));
+        String image = "src\\resources\\Imagens\\LogoJanela.jpg";
+        primaryStage.getIcons().add(new Image(image));
 
         BorderPane TelaSobre = new BorderPane();
-        TelaSobre.setStyle("-fx-background-image: url('file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/FlorestBackground.gif');" +
-                "-fx-background-size: cover;");
+        String background = "src/resources/Imagens/FlorestBackground.gif";
+        TelaSobre.setStyle("-fx-background-image: url('" + background + "');");
 
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
@@ -44,10 +45,8 @@ public class Sobre extends Application {
         sair.setId("sair-button");
 
         sair.setOnAction(e -> {
-            primaryStage.close();
-            Stage inicialStage = new Stage();
             TelaInicial telaInicial = new TelaInicial();
-            telaInicial.start(inicialStage);
+            telaInicial.start(primaryStage);
         });
 
         vbox.getChildren().add(sair);
@@ -66,7 +65,7 @@ public class Sobre extends Application {
         TelaSobre.setBottom(footer);
 
         Scene scene = new Scene(TelaSobre, 900, 540);
-        scene.getStylesheets().add(getClass().getResource("/Styles/src.main.java.telas.Sobre.css").toExternalForm());
+        scene.getStylesheets().add("src/resources/Styles/Sobre.css");
 
         primaryStage.setScene(scene);
         primaryStage.show();
