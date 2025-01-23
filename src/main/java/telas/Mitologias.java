@@ -1,5 +1,7 @@
 package src.main.java.telas;
 
+import src.main.java.telas.persons.PersonsImages;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -24,11 +26,12 @@ public class Mitologias extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("FOLCLORE SHARE");
-        primaryStage.getIcons().add(new Image(getClass().getResource("/Imagens/LogoJanela.jpg").toExternalForm()));
+        String image = "src\\resources\\Imagens\\LogoJanela.jpg";
+        primaryStage.getIcons().add(new Image(image));
 
         BorderPane folclore = new BorderPane();
-        folclore.setStyle("-fx-background-image: url('file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/FlorestBackground.gif');" +
-                "-fx-background-size: cover;");
+        String background = "src/resources/Imagens/FlorestBackground.gif";
+        folclore.setStyle("-fx-background-image: url('" + background + "');");
 
         GridPane grid = new GridPane();
         grid.setHgap(20);
@@ -41,8 +44,10 @@ public class Mitologias extends Application {
         folclore.setTop(tituloLabel);
         BorderPane.setAlignment(tituloLabel, Pos.CENTER);
 
+        PersonsImages PI = new PersonsImages();//classe para imagem dos perosnagens
+
         // Curupira
-        Image curupiraImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/src.main.resources.Imagens/Personagens/Curupira.png");
+        Image curupiraImage = new Image(PI.getCurupira());
         ImageView curupiraImageView = new ImageView(curupiraImage);
         curupiraImageView.setFitWidth(120);
         curupiraImageView.setFitHeight(120);
