@@ -66,6 +66,32 @@ FolcloreShare/
 ├── build.gradle
 └── README.md
 ````
+
+## Melhorias na Versão 2.0 
+
+Com a versão 2.0, várias melhorias foram implementadas para tornar a experiência mais fluida, organizada e divertida. Confira as principais mudanças:
+
+### 1. **Nova Estrutura de Pastas**
+- A estrutura de diretórios foi reformulada, seguindo o padrão de projetos Java, com a organização centralizada em `src`. Isso melhora a manutenção e escalabilidade do código.
+
+### 2. **Classe para Leitura de Arquivos**
+- Foi criada uma classe dedicada para a leitura de recursos, como imagens e textos. Agora, é mais fácil gerenciar e acessar os arquivos do projeto, garantindo uma organização mais limpa e eficiente.
+
+### 3. **Melhor Responsividade**
+- Ajustes na interface para garantir que o **Folclore Share** tenha uma boa aparência e funcione bem em diferentes resoluções de tela, proporcionando uma experiência fluida em diversos dispositivos.
+
+### 4. **Refatoração de Código**
+- A lógica do código foi aprimorada, tornando-o mais eficiente e legível. Isso facilita futuras manutenções e melhora a performance do projeto.
+
+### 5. **Animações de Transição**
+- A navegação entre telas agora é mais suave, com animações de transição que tornam a interação mais agradável e moderna.
+
+### 6. **Organização do Código**
+- A organização do código foi aprimorada, separando melhor as responsabilidades entre as classes e criando pacotes mais claros e intuitivos.
+
+### 7. **Melhorias no Visual**
+- Alterações no layout e design, como o uso de animações e ajustes no estilo, deixam o projeto mais moderno e dinâmico.
+
 ## Como Executar 🚀
 
 Para rodar o **Folclore Share** em sua máquina, você precisa ter o **Java 22** e o **JavaFX** configurados. Siga os passos abaixo:
