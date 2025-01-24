@@ -1,4 +1,6 @@
-package src.main.java.telas.persons;
+package src.main.java.telas.persons.iara;
+
+import src.main.java.telas.persons.PersonsData;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -20,11 +22,12 @@ public class Iara extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("FOLCLORE SHARE");
-        primaryStage.getIcons().add(new Image(getClass().getResource("/Imagens/LogoJanela.jpg").toExternalForm()));
+        String image = "src\\resources\\Imagens\\LogoJanela.jpg";
+        primaryStage.getIcons().add(new Image(image));
 
         BorderPane folclore = new BorderPane();
-        folclore.setStyle("-fx-background-image: url('file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/FlorestBackground.gif');" +
-                "-fx-background-size: cover;");
+        String background = "src/resources/Imagens/FlorestBackground.gif";
+        folclore.setStyle("-fx-background-image: url('" + background + "');");
 
         VBox vbox = new VBox(10);
         vbox.setPadding(new Insets(20));
@@ -35,7 +38,9 @@ public class Iara extends Application {
         tituloLabel.setId("titulo-label-iara");
         vbox.getChildren().addAll(tituloLabel);
 
-        Image curupiraImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/src.main.resources.Imagens/Personagens/src.main.java.telas.persons.Iara.png");
+        PersonsData PData = new PersonsData();
+
+        Image curupiraImage = new Image(PData.getIara());
         ImageView curupiraImageView = new ImageView(curupiraImage);
         curupiraImageView.setFitWidth(100);
         curupiraImageView.setFitHeight(100);
@@ -48,17 +53,7 @@ public class Iara extends Application {
 
         vbox.getChildren().addAll(curupiraContainer);
 
-        Label historia = new Label(
-                "A src.main.java.telas.persons.Iara, também conhecida como Mãe d'Água, é uma das mais encantadoras figuras do folclore brasileiro. Ela é uma\n" +
-                        "serena e bela sereia que vive nas águas doces dos rios e lagos da Amazônia. Sua aparência é descrita como a de uma\n" +
-                        "mulher de longos cabelos negros e olhos penetrantes, com metade do corpo humano e a outra metade de peixe. src.main.java.telas.persons.Iara é\n" +
-                        "famosa por seu canto hipnotizante, que atrai os navegantes para as profundezas das águas. Aqueles que ouvem sua voz\n" +
-                        "melodiosa não conseguem resistir ao seu encanto e acabam sendo levados para o fundo dos rios. Apesar de sua beleza\n" +
-                        "e fascinação, a src.main.java.telas.persons.Iara pode ser perigosa para aqueles que se aproximam de seu território sem respeito. No entanto,\n" +
-                        "algumas histórias contam que a src.main.java.telas.persons.Iara é uma protetora das águas e das criaturas que nela habitam, punindo aqueles\n" +
-                        "que poluem ou ameaçam seu ambiente. Assim, ela é uma representação da força misteriosa da natureza e da importância\n" +
-                        "de preservar os rios e as florestas do Brasil."
-        );
+        Label historia = new Label(PData.getIaraSobre());
         historia.setId("historia");
         vbox.getChildren().add(historia);
 
@@ -67,10 +62,8 @@ public class Iara extends Application {
         Button sair = new Button("SAIR");
         sair.setId("sair-button");
         sair.setOnAction(e -> {
-            Stage mitologiasStage = new Stage();
             Mitologias mitologias = new Mitologias();
-            mitologias.start(mitologiasStage);
-            primaryStage.close();
+            mitologias.start(primaryStage);
         });
 
         HBox hBox = new HBox();
@@ -81,7 +74,7 @@ public class Iara extends Application {
         folclore.setBottom(hBox);
 
         Scene scene = new Scene(folclore, 900, 540);
-        scene.getStylesheets().add("/Styles/Historias.css");
+        scene.getStylesheets().add("src/resources/Styles/Historias.css");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

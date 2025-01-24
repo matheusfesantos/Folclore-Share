@@ -44,10 +44,8 @@ public class TelaInicial extends Application {
         vbox.getChildren().add(iniciar);
 
         iniciar.setOnAction(e -> {
-            Stage mitologiasStage = new Stage();
             Mitologias mitologias = new Mitologias();
-            mitologias.start(mitologiasStage);
-            primaryStage.close();
+            mitologias.start(primaryStage);
         });
 
         Button sobre = new Button("SOBRE NÓS");

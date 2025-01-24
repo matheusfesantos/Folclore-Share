@@ -1,6 +1,6 @@
 package src.main.java.telas;
 
-import src.main.java.telas.persons.PersonsImages;
+import src.main.java.telas.persons.PersonsData;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -16,10 +16,10 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import src.main.java.TelaInicial;
-import src.main.java.telas.persons.Boitata;
-import src.main.java.telas.persons.Curipira;
-import src.main.java.telas.persons.Iara;
-import src.main.java.telas.persons.Saci;
+import src.main.java.telas.persons.boitata.Boitata;
+import src.main.java.telas.persons.curupira.Curipira;
+import src.main.java.telas.persons.iara.Iara;
+import src.main.java.telas.persons.saci.Saci;
 
 public class Mitologias extends Application {
 
@@ -44,7 +44,7 @@ public class Mitologias extends Application {
         folclore.setTop(tituloLabel);
         BorderPane.setAlignment(tituloLabel, Pos.CENTER);
 
-        PersonsImages PI = new PersonsImages();//classe para imagem dos perosnagens
+        PersonsData PI = new PersonsData();//classe para imagem dos perosnagens
 
         // Curupira
         Image curupiraImage = new Image(PI.getCurupira());
@@ -57,15 +57,13 @@ public class Mitologias extends Application {
         curupiraContainer.setId("curupira-image");
         curupiraContainer.setPadding(new Insets(10));
         curupiraContainer.setOnMouseClicked(e -> {
-            Stage curupiraStage = new Stage();
             Curipira curipira = new Curipira();
-            curipira.start(curupiraStage);
-            primaryStage.close();
+            curipira.start(primaryStage);
         });
         grid.add(curupiraContainer, 0, 0);
 
-        // src.main.java.telas.persons.Saci
-        Image saciImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/src.main.resources.Imagens/Personagens/src.main.java.telas.persons.Saci.png");
+        // src.main.java.telas.persons.saci.Saci
+        Image saciImage = new Image(PI.getSaci());
         ImageView saciImageView = new ImageView(saciImage);
         saciImageView.setFitWidth(120);
         saciImageView.setFitHeight(120);
@@ -75,15 +73,13 @@ public class Mitologias extends Application {
         saciContainer.setId("saci-image");
         saciContainer.setPadding(new Insets(10));
         saciContainer.setOnMouseClicked(e -> {
-            Stage saciStage = new Stage();
             Saci saci = new Saci();
-            saci.start(saciStage);
-            primaryStage.close();
+            saci.start(primaryStage);
         });
         grid.add(saciContainer, 1, 0);
 
-        // src.main.java.telas.persons.Boitata
-        Image boitataImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/src.main.resources.Imagens/Personagens/src.main.java.telas.persons.Boitata.gif");
+        // src.main.java.telas.persons.boitata.Boitata
+        Image boitataImage = new Image(PI.getBoitata());
         ImageView boitataImageView = new ImageView(boitataImage);
         boitataImageView.setFitWidth(120);
         boitataImageView.setFitHeight(120);
@@ -93,15 +89,13 @@ public class Mitologias extends Application {
         boitataContainer.setId("boitata-image");
         boitataContainer.setPadding(new Insets(10));
         boitataContainer.setOnMouseClicked(e -> {
-            Stage boitataStage = new Stage();
             Boitata boitata = new Boitata();
-            boitata.start(boitataStage);
-            primaryStage.close();
+            boitata.start(primaryStage);
         });
         grid.add(boitataContainer, 2, 0);
 
-        // src.main.java.telas.persons.Iara
-        Image iaraImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/src.main.resources.Imagens/Personagens/src.main.java.telas.persons.Iara.png");
+        // src.main.java.telas.persons.iara.Iara
+        Image iaraImage = new Image(PI.getIara());
         ImageView iaraImageView = new ImageView(iaraImage);
         iaraImageView.setFitWidth(120);
         iaraImageView.setFitHeight(120);
@@ -111,10 +105,8 @@ public class Mitologias extends Application {
         iaraContainer.setId("iara-image");
         iaraContainer.setPadding(new Insets(10));
         iaraContainer.setOnMouseClicked(e -> {
-            Stage iaraStage = new Stage();
             Iara iara = new Iara();
-            iara.start(iaraStage);
-            primaryStage.close();
+            iara.start(primaryStage);
         });
         grid.add(iaraContainer, 3, 0);
 
@@ -123,10 +115,8 @@ public class Mitologias extends Application {
         Button sair = new Button("SAIR");
         sair.setId("sair-button");
         sair.setOnAction(e -> {
-            primaryStage.close();
-            Stage inicialStage = new Stage();
             TelaInicial telaInicial = new TelaInicial();
-            telaInicial.start(inicialStage);
+            telaInicial.start(primaryStage);
         });
 
         HBox hBox = new HBox();
@@ -134,11 +124,18 @@ public class Mitologias extends Application {
         hBox.setPadding(new Insets(10));
         hBox.getChildren().add(sair);
 
+        HBox rodape = new HBox(10);
+        rodape.setAlignment(Pos.CENTER);
+        rodape.setPadding(new Insets(10));
+        rodape.setId("rodape");
+
+        Label rodapeLabel = new Label("By Matheus Ferreira");
+        rodapeLabel.setId("rodape-label");
+
         folclore.setBottom(hBox);
-        
 
         Scene scene = new Scene(folclore, 900, 540);
-        scene.getStylesheets().add("/Styles/src.main.java.telas.Mitologias.css");
+        scene.getStylesheets().add("src/resources/Styles/Mitologias.css");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

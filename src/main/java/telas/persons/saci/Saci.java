@@ -1,4 +1,6 @@
-package src.main.java.telas.persons;
+package src.main.java.telas.persons.saci;
+
+import src.main.java.telas.persons.PersonsData;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -20,11 +22,12 @@ public class Saci extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("FOLCLORE SHARE");
-        primaryStage.getIcons().add(new Image(getClass().getResource("/Imagens/LogoJanela.jpg").toExternalForm()));
+        String image = "src\\resources\\Imagens\\LogoJanela.jpg";
+        primaryStage.getIcons().add(new Image(image));
 
         BorderPane folclore = new BorderPane();
-        folclore.setStyle("-fx-background-image: url('file:C:/Users/matheus.fgs/Desktop/FOLCLORE/Imagens/FlorestBackground.gif');" +
-                "-fx-background-size: cover;");
+        String background = "src/resources/Imagens/FlorestBackground.gif";
+        folclore.setStyle("-fx-background-image: url('" + background + "');");
 
         VBox vbox = new VBox(10);
         vbox.setPadding(new Insets(20));
@@ -35,7 +38,9 @@ public class Saci extends Application {
         tituloLabel.setId("titulo-label-saci");
         vbox.getChildren().addAll(tituloLabel);
 
-        Image curupiraImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/src.main.resources.Imagens/Personagens/src.main.java.telas.persons.Saci.png");
+        PersonsData PData = new PersonsData();
+
+        Image curupiraImage = new Image(PData.getSaci());
         ImageView curupiraImageView = new ImageView(curupiraImage);
         curupiraImageView.setFitWidth(100);
         curupiraImageView.setFitHeight(100);
@@ -48,15 +53,7 @@ public class Saci extends Application {
 
         vbox.getChildren().addAll(curupiraContainer);
 
-        Label historia = new Label(
-                "O src.main.java.telas.persons.Saci-Pererê é uma das figuras mais travessas e encantadoras do folclore brasileiro. Ele é representado como um\n" +
-                        "menino negro, de uma perna só, que usa um gorro vermelho mágico. Famoso por suas brincadeiras e travessuras, o src.main.java.telas.persons.Saci\n" +
-                        "aparece em redemoinhos de vento, pregando peças nos desavisados. Ele esconde objetos, atrapalha tarefas domésticas\n" +
-                        "e prega peças em viajantes. Apesar de suas travessuras, o src.main.java.telas.persons.Saci não é um ser mal-intencionado. Ele gosta de\n" +
-                        "brincadeiras, mas também ajuda aqueles que o tratam com respeito. A lenda do src.main.java.telas.persons.Saci ensina sobre o valor da\n" +
-                        "esperteza e da malícia, além de destacar o respeito pelas forças da natureza. Com seu gorro vermelho, o src.main.java.telas.persons.Saci\n" +
-                        "mantém o controle de suas travessuras e guarda segredos da mata, sendo um personagem amado e temido ao mesmo tempo."
-        );
+        Label historia = new Label(PData.getSaciSobre());
         historia.setId("historia");
         vbox.getChildren().add(historia);
 
@@ -65,10 +62,8 @@ public class Saci extends Application {
         Button sair = new Button("SAIR");
         sair.setId("sair-button");
         sair.setOnAction(e -> {
-            Stage mitologiasStage = new Stage();
             Mitologias mitologias = new Mitologias();
-            mitologias.start(mitologiasStage);
-            primaryStage.close();
+            mitologias.start(primaryStage);
         });
 
         HBox hBox = new HBox();
@@ -79,7 +74,7 @@ public class Saci extends Application {
         folclore.setBottom(hBox);
 
         Scene scene = new Scene(folclore, 900, 540);
-        scene.getStylesheets().add("/Styles/Historias.css");
+        scene.getStylesheets().add("src/resources/Styles/Historias.css");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

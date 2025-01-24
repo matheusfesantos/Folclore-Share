@@ -8,6 +8,7 @@
 }
 
 #titulo-label {
+    -fx-text-alignment: center;
     -fx-font-weight: bold;
     -fx-text-transform: uppercase;
     -fx-font-size: 60px;
@@ -15,6 +16,7 @@
 }
 
 #titulo-label-boitata{
+    -fx-text-alignment: center;
     -fx-font-weight: bold;
     -fx-text-transform: uppercase;
     -fx-font-size: 60px;
@@ -22,6 +24,7 @@
 }
 
 #titulo-label-saci{
+    -fx-text-alignment: center;
     -fx-font-weight: bold;
     -fx-text-transform: uppercase;
     -fx-font-size: 60px;
@@ -29,6 +32,7 @@
 }
 
 #titulo-label-iara{
+    -fx-text-alignment: center;
     -fx-font-weight: bold;
     -fx-text-transform: uppercase;
     -fx-font-size: 60px;

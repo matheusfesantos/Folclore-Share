@@ -1,4 +1,6 @@
-package src.main.java.telas.persons;
+package src.main.java.telas.persons.curupira;
+
+import src.main.java.telas.persons.PersonsData;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -15,26 +17,30 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import src.main.java.telas.Mitologias;
 
-public class Boitata extends Application {
+public class Curipira extends Application {
 
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("FOLCLORE SHARE");
-        String Image = "src\\resources\\Imagens\\Personagens\\Boitata.gif";
-        primaryStage.getIcons().add(new Image(Image));
+        String image = "src\\resources\\Imagens\\LogoJanela.jpg";
+        primaryStage.getIcons().add(new Image(image));
 
         BorderPane folclore = new BorderPane();
+        String background = "src/resources/Imagens/FlorestBackground.gif";
+        folclore.setStyle("-fx-background-image: url('" + background + "');");
 
         VBox vbox = new VBox(10);
         vbox.setPadding(new Insets(20));
         vbox.setAlignment(Pos.CENTER);
         vbox.setId("VBOX");
 
-        Label tituloLabel = new Label("BOITATA");
-        tituloLabel.setId("titulo-label-boitata");
+        Label tituloLabel = new Label("CURUPIRA");
+        tituloLabel.setId("titulo-label");
         vbox.getChildren().addAll(tituloLabel);
 
-        Image curupiraImage = new Image("file:C:/Users/matheus.fgs/Desktop/FOLCLORE/src.main.resources.Imagens/Personagens/src.main.java.telas.persons.Boitata.gif");
+        PersonsData PData = new PersonsData();
+
+        Image curupiraImage = new Image(PData.getCurupira());
         ImageView curupiraImageView = new ImageView(curupiraImage);
         curupiraImageView.setFitWidth(100);
         curupiraImageView.setFitHeight(100);
@@ -47,16 +53,7 @@ public class Boitata extends Application {
 
         vbox.getChildren().addAll(curupiraContainer);
 
-        Label historia = new Label(
-                "O Boitatá é uma lenda do folclore brasileiro, conhecido como uma serpente de fogo que protege as florestas e campos\n" +
-                        "dos invasores. Ele é descrito como um espírito brilhante que percorre os campos à noite, assustando aqueles que\n" +
-                        "tentam destruir a natureza com incêndios. Seu corpo luminoso serpenteia pelo ar, criando um espetáculo assustador\n" +
-                        "e fascinante. O Boitatá não é uma criatura maligna, mas sim um defensor feroz do meio ambiente. Ele persegue\n" +
-                        "aqueles que ateiam fogo à mata, devolvendo as chamas com grande intensidade. Sua luz ofuscante é tanto uma\n" +
-                        "advertência quanto uma punição para os que desrespeitam a natureza. Assim como o Curupira, o Boitatá é um símbolo\n" +
-                        "de resistência, uma manifestação da fúria da terra contra a destruição e a falta de respeito pelo equilíbrio\n" +
-                        "ambiental."
-        );
+        Label historia = new Label(PData.getCurupiraSobre());
         historia.setId("historia");
         vbox.getChildren().add(historia);
 
@@ -65,10 +62,8 @@ public class Boitata extends Application {
         Button sair = new Button("SAIR");
         sair.setId("sair-button");
         sair.setOnAction(e -> {
-            Stage mitologiasStage = new Stage();
             Mitologias mitologias = new Mitologias();
-            mitologias.start(mitologiasStage);
-            primaryStage.close();
+            mitologias.start(primaryStage);
         });
 
         HBox hBox = new HBox();
@@ -79,7 +74,7 @@ public class Boitata extends Application {
         folclore.setBottom(hBox);
 
         Scene scene = new Scene(folclore, 900, 540);
-        scene.getStylesheets().add("src\\main\\resources\\Styles\\Historias.css");
+        scene.getStylesheets().add("src/resources/Styles/Historias.css");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
