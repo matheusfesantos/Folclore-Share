@@ -66,3 +66,48 @@ FolcloreShare/
 ├── build.gradle
 └── README.md
 ````
+## Como Executar 🚀
+
+Para rodar o **Folclore Share** em sua máquina, você precisa ter o **Java 22** e o **JavaFX** configurados. Siga os passos abaixo:
+
+### 1. Requisitos
+- **Java 22**: Faça o download do JDK 22 [aqui](https://jdk.java.net/22/).
+- **JavaFX**: Baixe o JavaFX a partir do [site oficial](https://openjfx.io/).
+
+### 2. Configurando o Ambiente
+
+1. **Instale o JDK 22** em sua máquina e configure a variável de ambiente `JAVA_HOME` apontando para o diretório onde o JDK foi instalado.
+   
+2. **Baixe e configure o JavaFX**:
+   - Baixe o **JavaFX SDK** adequado para o seu sistema operacional.
+   - Adicione a pasta `lib` do JavaFX no seu classpath ou como uma biblioteca no seu IDE.
+
+### 3. Executando o Projeto
+
+Se você estiver usando o **IntelliJ IDEA** ou outro IDE similar:
+
+1. Importe o projeto para sua IDE.
+2. Adicione as bibliotecas do **JavaFX** ao projeto.
+   - No IntelliJ, você pode adicionar as dependências do JavaFX no arquivo `pom.xml` ou diretamente nas configurações do projeto.
+3. Compile o projeto e execute a classe principal `FolcloreShareApp.java`.
+
+Se preferir rodar via linha de comando, use os seguintes passos:
+
+1. Navegue até o diretório onde o código foi clonado.
+2. Compile o código com o seguinte comando (supondo que o JavaFX esteja configurado corretamente):
+
+```bash
+javac --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml src/main/java/app/FolcloreShareApp.java
+```
+
+3. Para executar o projeto:
+
+```bash
+java --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml app.FolcloreShareApp
+```
+
+Substitua `/path/to/javafx-sdk/lib` pelo caminho onde você extraiu o **JavaFX SDK**.
+
+### 4. Pronto para Explorar!
+
+Agora, você pode aproveitar o **Folclore Share** e explorar o fascinante mundo do folclore brasileiro. Divirta-se!
