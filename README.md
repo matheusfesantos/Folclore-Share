@@ -1,3 +1,5 @@
+![Logo do Folclore Share](https://github.com/matheusfesantos/Folclore-Share/blob/v2/src/resources/Logo.png)
+
 # Folclore Share 🌳✨
 **Versão 2.0**
 
@@ -7,16 +9,12 @@ O **Folclore Share** foi um dos meus primeiros projetos em **JavaFX**, e eu tenh
 ## Objetivo 🎯
 Oferecer um jeito único e divertido de aprender sobre o folclore brasileiro. Através de uma interface interativa e envolvente, os usuários podem explorar personagens e histórias fascinantes.
 
----
-
 ## Melhorias na Versão 2.0 🚀
 - **Nova Estrutura de Pastas**: Adotado o padrão de projetos Java com organização centralizada em `src`.
 - **Classe para Leitura de Arquivos**: Criada uma classe dedicada para leitura de informações como fotos e textos, facilitando o gerenciamento de recursos.
 - **Melhor Responsividade**: Ajustes na interface para garantir uma experiência fluida em diferentes resoluções.
 - **Melhoria na Lógica do Código**: Código refatorado para maior eficiência e legibilidade.
 - **Animações de Transição**: As mudanças entre telas agora contam com animações mais suaves e modernas.
-
----
 
 ## Capturas de Tela 📸
 
@@ -29,12 +27,8 @@ Oferecer um jeito único e divertido de aprender sobre o folclore brasileiro. At
 ### Tela de História dos Personagens
 [![História dos Personagens](https://drive.google.com/uc?id=1gVGkW3LqIOIvxK-0ROTabb7ubp38EaB_)](https://drive.google.com/file/d/1gVGkW3LqIOIvxK-0ROTabb7ubp38EaB_/view?usp=sharing)
 
----
-
 ## Eu criando a logo do Folclore Share 🎨
 [![Criando a logo](https://drive.google.com/uc?id=1CDdL6Cu31zJpARclYAh03ZbiZIod2AEt)](https://drive.google.com/file/d/1CDdL6Cu31zJpARclYAh03ZbiZIod2AEt/view?usp=sharing)
-
----
 
 ## Estrutura de Pastas 📂
 A organização de diretórios do projeto segue o padrão `src`, proporcionando uma melhor estruturação e manutenção do código:
