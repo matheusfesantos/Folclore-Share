@@ -2,6 +2,7 @@
 
 # Folclore Share 🌳✨
 **Versão 2.0**
+![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-2965F1?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Sobre o Projeto 💖
 O **Folclore Share** foi um dos meus primeiros projetos em **JavaFX**, e eu tenho um carinho imenso por ele. Com esta versão 2.0, estou revisitando o projeto para melhorar suas funcionalidades e implementar mudanças que refletem minha evolução como desenvolvedor Java.
